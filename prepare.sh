@@ -13,11 +13,13 @@ convert CoverImage.png CoverImage.jpg
 
 perl "${repodir}/res/prepfile.pl" \
   -m "${repodir}/res/src--flc.xhtml" \
+  -rcp "${repodir}/recipe.txt" \
   -fx flc-*.xhtml
 > gnr--flc.xhtml
 
 perl "${repodir}/res/prepfile.pl" \
   -m "${repodir}/res/src--cog.xhtml" \
+  -rcp "${repodir}/recipe.txt" \
   -fx cog-*.xhtml
 > gnr--cog.xhtml
 
