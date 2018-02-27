@@ -37,5 +37,12 @@ div.sublhead {
   font-weight: bold;
 }
 
+div.tocitem {
+  padding: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+}
+
 
 
