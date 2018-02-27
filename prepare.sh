@@ -9,29 +9,18 @@ rm -rf *.jpg *.png
 xcf2png CoverImage.xcf -o CoverImage.png
 convert CoverImage.png CoverImage.jpg
 
-( cd Text && (
+rm -rf recipe.txt
 
-perl "${repodir}/res/prepfile.pl" \
-  -m "${repodir}/res/src--flc.xhtml" \
-  -rcp "${repodir}/recipe.txt" \
-  -fx flc-*.xhtml
-> gnr--flc.xhtml
+echo "title:Discursive Compendium of Fallacies" > recipe.txt
+echo "author:Sophia Elizabeth Shapira" >> recipe.txt
+echo "publisher:Sophia Elizabeth Shapira" >> recipe.txt
+echo "language:en" >> recipe.txt
+echo "year:$(date +%Y)" >> recipe.txt
 
-perl "${repodir}/res/prepfile.pl" \
-  -m "${repodir}/res/src--cog.xhtml" \
-  -rcp "${repodir}/recipe.txt" \
-  -fx cog-*.xhtml
-> gnr--cog.xhtml
+sh res/oneitem.sh flc
+sh res/oneitem.sh cog
+sh res/oneitem.sh mal
+sh res/oneitem.sh bon
 
-perl "${repodir}/res/prepfile.pl" \
-  -m "${repodir}/res/src--mal.xhtml" \
-  -fx mal-*.xhtml
-> gnr--mal.xhtml
 
-perl "${repodir}/res/prepfile.pl" \
-  -m "${repodir}/res/src--bon.xhtml" \
-  -fx bon-*.xhtml
-> gnr--bon.xhtml
-
-) )
 
