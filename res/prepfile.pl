@@ -7,6 +7,7 @@ my $outfile;
 my $prefixa;
 my $cont_before;
 my $cont_after;
+my $section_title;
 
 @arglist = @ARGV;
 if ( &counto(@arglist) < 4.5 )
@@ -44,9 +45,12 @@ $prefixa = shift(@arglist);
 {
   my $lc_cm;
   my $lc_con;
+  my $lc_sga; my $lc_sgb;
   $lc_cm = 'cat ' . &bsc($srcfile);
   $lc_con = `$lc_cm`;
   ($cont_before,$cont_after) = split(quotemeta("<!-- tocx -->"),$lc_con,2);
+  ($lc_sga,$lc_sgb) = split(quotemeta('<title>'),$lc_con);
+  ($section_title,$lc_sga) = split(quotemeta('</title>'),$lc_sgb);
 }
 
 
@@ -58,6 +62,7 @@ print OUTPOT $cont_before;
 print OUTPOT "<div class = \"sublbod\">\n";
 
 print RCPFIL 'text:' . $prefixa . $outfile . "\n";
+print RCPFIL 'cont:2:top_of_page:' . $section_title . "\n";
 {
   my $lc_fl;
   foreach $lc_fl (@arglist) { &foreachfile($lc_fl); }
@@ -75,6 +80,7 @@ sub foreachfile {
   ($lc_ttl,$lc_sga) = split(quotemeta('</title>'),$lc_sgb);
 
   print RCPFIL 'text:' . $prefixa . $_[0] . "\n";
+  print RCPFIL 'cont:3:top_of_page:' . $lc_ttl . "\n";
   print OUTPOT "\n<div class = \"tocitem\">";
   print OUTPOT "<a href = \"" . $_[0] . "\">";
   print OUTPOT $lc_ttl;

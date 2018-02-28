@@ -20,10 +20,22 @@ echo "publisher:Sophia Elizabeth Shapira" >> recipe.txt
 echo "language:en" >> recipe.txt
 echo "year:$(date +%Y)" >> recipe.txt
 
+perl res/multishow.pl 'css:' Styles/*.css >> recipe.txt
+
+echo "img:Images/CoverImage.jpg" >> recipe.txt
+
+echo "ftext:Text/CoverPage.xhtml" >> recipe.txt
+echo "text:Text/maintoc.xhtml" >> recipe.txt
+echo "cont:1:top_of_page:Contents" >> recipe.txt
+
 sh res/oneitem.sh flc
 sh res/oneitem.sh cog
 sh res/oneitem.sh mal
 sh res/oneitem.sh bon
+
+
+chobakepubtl build recipe.txt prep discursive-compendium
+
 
 
 
