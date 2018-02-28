@@ -1,6 +1,7 @@
 *.epub
 /*.jpg
 /*.png
+/Images
 /Text/gnr--*
 /recipe.txt
 /prep

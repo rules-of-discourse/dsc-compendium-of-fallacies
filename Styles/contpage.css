@@ -1,3 +1,11 @@
 
 
+div.maincitm {
+  padding: 10px;
+}
+
+div.maincitm::before {
+  content: "\2295 \00a0 ";
+}
+
 

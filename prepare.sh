@@ -8,6 +8,9 @@ repodir="$(pwd)"
 rm -rf *.jpg *.png
 xcf2png CoverImage.xcf -o CoverImage.png
 convert CoverImage.png CoverImage.jpg
+rm -rf Images
+mkdir Images
+cp CoverImage.jpg Images/.
 
 rm -rf recipe.txt
 

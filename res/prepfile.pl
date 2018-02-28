@@ -45,7 +45,7 @@ $prefixa = shift(@arglist);
   my $lc_cm;
   my $lc_con;
   $lc_cm = 'cat ' . &bsc($srcfile);
-  $lc_con = `cat $lc_cm`;
+  $lc_con = `$lc_cm`;
   ($cont_before,$cont_after) = split(quotemeta("<!-- tocx -->"),$lc_con,2);
 }
 
@@ -57,7 +57,7 @@ open RCPFIL,('| cat >> ' . &bsc($rcpfile));
 print OUTPOT $cont_before;
 print OUTPOT "<div class = \"sublbod\">\n";
 
-print RCPFIL $prefixa . $outfile . "\n";
+print RCPFIL 'text:' . $prefixa . $outfile . "\n";
 {
   my $lc_fl;
   foreach $lc_fl (@arglist) { &foreachfile($lc_fl); }
@@ -74,7 +74,7 @@ sub foreachfile {
   ($lc_sga,$lc_sgb) = split(quotemeta('<title>'),$lc_con);
   ($lc_ttl,$lc_sga) = split(quotemeta('</title>'),$lc_sgb);
 
-  print RCPFIL $prefixa . $_[0] . "\n";
+  print RCPFIL 'text:' . $prefixa . $_[0] . "\n";
   print OUTPOT "\n<div class = \"tocitem\">";
   print OUTPOT "<a href = \"" . $_[0] . "\">";
   print OUTPOT $lc_ttl;
