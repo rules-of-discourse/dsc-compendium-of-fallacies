@@ -1,4 +1,14 @@
-
+# This script you run if you want to generate an EPUB file
+# that is missing the 'toc.ncx' resource. If you do that,
+# you will need to use another program (such as Sigil)
+# to do the finishing touches on the EPUB.
+#
+# Once upon a time, before the feature of _chobakepubtl_
+# that allowed generating the 'toc.ncx' was complete, there
+# was a good reason to do this. Now, however, I can not think
+# of any reason why you would want to generate such an
+# incomplete EPUB, but this option remains because I saw
+# no pressing reason to take it away.
 
 # Before we do anything else, we must make sure
 # that we are in the repo's main directory.

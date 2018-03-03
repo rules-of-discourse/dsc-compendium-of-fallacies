@@ -14,6 +14,10 @@ Aside from this project and a working unicoid environment
 (such as the Gnu-Linux environment) you will need at _least_
 the following tools to build the EPUB from these source files.
 
+### chobakwrap
+
+### chobakepubtl
+
 ### xcftools
 
 ### imagemagick
@@ -27,8 +31,10 @@ instructions how to prepare the EPUB - but I'm not
 deleting it from the list of required tools until I am
 _certain_ that __xcftools_ will work without GIMP installed.
 
-### Sigil
-This ebook publishing program.
+### kindlegen
+Well \-\- you need it if you want the MOBI file to be generated.
+However, if the EPUB format is the only one you're interested in,
+then you won't need this tool.
 
 ## Steps --
 
@@ -42,52 +48,19 @@ use the __sh__ utility to run the
 script _prepare.sh_ - which is in the
 repository's main directory.
 
-### Create the EPUB Project
-Use Sigil to create an EPUB file.
+Well \-\- there used to be several
+more steps.
+However, with the current state
+of technology, that's pretty much
+all there is to do.
 
-### Load the cover image
-Very simple -- just import the _CoverImage.jpg_ file into
-the EPUB project.
+You will find the files _discursive-compendium.epub_
+and _discursive-compendium.mobi_ appear in the
+project's direcotry after you run the script.
+Now, how you open the files to read \-
+that depends on what ebook reader you use.
 
-### Load the stylesheets
-In the _Styles_ directory of this repository, there are
-a number of files ending in the _.css_ extention.
-Import them into the EPUB project.
-The order is not important.
 
-### The Metadata
-In the file _content.opf_ replace the __metadata__
-section with the contents of the file _metadata.xml_.
 
-### Import the XHTML files
-Unlike with the other files that you import, it is
-very important that the XHTML files be imported in
-the correct order -- and (even more importantly)
-are placed in that order in the _Files_ section
-of the project.
-Here we will discuss the files to add in the
-order that they need to be in the project.
 
-All of the XHTML files that you need to add
-will be in the _Text_ directory of this repository.
 
-#### The cover page
-This one you add in a different manner.
-Instead of using the menu to import the file,
-you instead transform the one pre-existing XHTML
-file into this file with two sub-steps:
-
-1. You re-name the pre-existing XHTML file to be
-named _CoverPage.xhtml_
-2. You replace that file's contents with the
-contents of the _CoverPage.xhtml_ file in
-the _Text_ directory of this repository.
-
-Why do you import this page in such an unusual manner?
-Because in this case, you are dealing with the page
-that your project needs to recognize as the
-front cover of your document.
-
-However - all future pages that you import will
-be imprted through the import menu -- that is,
-the '+' icon on your toolbar.

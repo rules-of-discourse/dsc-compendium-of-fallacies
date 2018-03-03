@@ -36,7 +36,8 @@ sh res/oneitem.sh bon
 
 
 chobakepubtl build recipe.txt prep discursive-compendium
-
+rm -rf *.mobi
+kindlegen discursive-compendium.epub
 
 
 
