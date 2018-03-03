@@ -28,6 +28,8 @@ echo "cvimg:Images/CoverImage.jpg" >> recipe.txt
 echo "ftext:Text/CoverPage.xhtml" >> recipe.txt
 echo "text:Text/maintoc.xhtml" >> recipe.txt
 echo "cont:1:top_of_page:Contents" >> recipe.txt
+echo "text:Text/introduction.xhtml" >> recipe.txt
+echo "cont:2:*:Introduction" >> recipe.txt
 
 sh res/oneitem.sh flc
 sh res/oneitem.sh cog

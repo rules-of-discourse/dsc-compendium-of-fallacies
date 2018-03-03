@@ -62,7 +62,7 @@ print OUTPOT $cont_before;
 print OUTPOT "<div class = \"sublbod\">\n";
 
 print RCPFIL 'text:' . $prefixa . $outfile . "\n";
-print RCPFIL 'cont:2:top_of_page:' . $section_title . "\n";
+print RCPFIL 'cont:2:*:' . $section_title . "\n";
 {
   my $lc_fl;
   foreach $lc_fl (@arglist) { &foreachfile($lc_fl); }
@@ -80,7 +80,7 @@ sub foreachfile {
   ($lc_ttl,$lc_sga) = split(quotemeta('</title>'),$lc_sgb);
 
   print RCPFIL 'text:' . $prefixa . $_[0] . "\n";
-  print RCPFIL 'cont:3:top_of_page:' . $lc_ttl . "\n";
+  print RCPFIL 'cont:3:*:' . $lc_ttl . "\n";
   print OUTPOT "\n<div class = \"tocitem\">";
   print OUTPOT "<a href = \"" . $_[0] . "\">";
   print OUTPOT $lc_ttl;
