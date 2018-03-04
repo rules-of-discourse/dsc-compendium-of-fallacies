@@ -5,9 +5,7 @@
 cd "$(dirname "${0}")" || exit
 repodir="$(pwd)"
 
-rm -rf *.jpg *.png
-xcf2png CoverImage.xcf -o CoverImage.png
-convert CoverImage.png CoverImage.jpg
+sh image-prepare.sh
 rm -rf Images
 mkdir Images
 cp CoverImage.jpg Images/.
