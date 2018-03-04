@@ -5,19 +5,36 @@
 cd "$(dirname "${0}")" || exit
 repodir="$(pwd)"
 
-sh image-prepare.sh
+rm -rf tmpres
+mkdir tmpres
+perl res/perlsplit.pl \
+"$(date '+%Y-%m-%d - %-I:%M%P::%Y-%m-%d-%H%M::%Y::%Y-%m-%d')" \
+'::' \
+tmpres/datetime-neat.txt tmpres/datetime-cyber.txt \
+tmpres/year.txt tmpres/smdate.txt
+
+
+
+
+
+
+rm -rf *.jpg *.png
+xcf2png CoverImage.xcf -o CoverImage.png
+convert CoverImage.png -gravity North -pointsize 120 -annotate +0+1800 "$(cat tmpres/datetime-neat.txt)" CoverImage01.png
+convert CoverImage01.png CoverImage.jpg
+
 rm -rf Images
 mkdir Images
 cp CoverImage.jpg Images/.
 
 rm -rf recipe.txt
 
-echo "title:Discursive Compendium of Fallacies - $(date +%Y-%m-%d)" > recipe.txt
+echo "title:Discursive Compendium of Fallacies - $(cat tmpres/datetime-neat.txt)" > recipe.txt
 echo "author:Sophia Elizabeth Shapira" >> recipe.txt
 echo "publisher:Sophia Elizabeth Shapira" >> recipe.txt
 echo "language:en" >> recipe.txt
-echo "year:$(date +%Y)" >> recipe.txt
-echo "date:$(date +%Y-%m-%d)" >> recipe.txt
+echo "year:$(cat tmpres/year.txt)" >> recipe.txt
+echo "date:$(cat tmpres/smdate.txt)" >> recipe.txt
 
 perl res/multishow.pl 'css:' Styles/*.css >> recipe.txt
 
