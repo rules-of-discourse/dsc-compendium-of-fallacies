@@ -14,7 +14,7 @@ cp CoverImage.jpg Images/.
 
 rm -rf recipe.txt
 
-echo "title:Discursive Compendium of Fallacies" > recipe.txt
+echo "title:Discursive Compendium of Fallacies - $(date +%Y-%m-%d)" > recipe.txt
 echo "author:Sophia Elizabeth Shapira" >> recipe.txt
 echo "publisher:Sophia Elizabeth Shapira" >> recipe.txt
 echo "language:en" >> recipe.txt
