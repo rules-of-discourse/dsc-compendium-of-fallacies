@@ -31,10 +31,12 @@ After that, you run the following litany in your shell:
     ( mkdir ~/gitter ) 2> /dev/null
     ( mkdir ~/gitter/mnd ) 2> /dev/null
     cd ~/gitter/mnd && (
+      rm -rf chobakwrap-tmp
       git clone https://github.com/sophia-collaborations/chobakwrap.git chobakwrap-tmp && (
         rm -rf chobakwrap
         mv chobakwrap-tmp chobakwrap
       )
+      rm -rf chobakwrap-tmp
       cd chobakwrap && (
         sh install.sh
         sh install.sh
@@ -56,10 +58,12 @@ litany in your shell:
     ( mkdir ~/gitter ) 2> /dev/null
     ( mkdir ~/gitter/mnd ) 2> /dev/null
     cd ~/gitter/mnd && (
+      rm -rf chobakepubtl-tmp
       git clone https://github.com/rules-of-discourse/chobakepubtl.git chobakepubtl-tmp && (
         rm -rf chobakepubtl
         mv chobakepubtl-tmp chobakepubtl
       )
+      rm -rf chobakepubtl-tmp
       cd chobakepubtl && (
         sh install.sh
       )
