@@ -15,12 +15,68 @@ Aside from this project and a working unicoid environment
 the following tools to build the EPUB from these source files.
 
 ### chobakwrap
+You will need this software as it is a prerequisite
+for __chobakepubtl__. Here is how you install it.
+
+First of all, you make sure that the __bin__ subdirectory
+of your home directory is on your execution path
+(which is specified by the __PATH__ environment variable).
+
+If it's not in there, you modify your shell-profile scripts
+so that it will be, then log out, and log back in again.
+
+After that, you run the following litany in your shell:
+
+    ( mkdir ~/bin ) 2> /dev/null
+    ( mkdir ~/gitter ) 2> /dev/null
+    ( mkdir ~/gitter/mnd ) 2> /dev/null
+    cd ~/gitter/mnd && (
+      git clone https://github.com/sophia-collaborations/chobakwrap.git chobakwrap-tmp && (
+        rm -rf chobakwrap
+        mv chobakwrap-tmp chobakwrap
+      )
+      cd chobakwrap && (
+        sh install.sh
+        sh install.sh
+      )
+    )
 
 ### chobakepubtl
+This package is a toolchain for creating ebooks from the
+command line and/or from scripts without having to use
+any of the GUI-based ebook authoring applications.
+You need it because it is used in the script that
+generates the ebook that this project is for.
+
+To install it, you first follow all the instructions
+for installing __chobakwrap__ and then,
+once you're done with that, you run the following
+litany in your shell:
+
+    ( mkdir ~/gitter ) 2> /dev/null
+    ( mkdir ~/gitter/mnd ) 2> /dev/null
+    cd ~/gitter/mnd && (
+      git clone https://github.com/rules-of-discourse/chobakepubtl.git chobakepubtl-tmp && (
+        rm -rf chobakepubtl
+        mv chobakepubtl-tmp chobakepubtl
+      )
+      cd chobakepubtl && (
+        sh install.sh
+      )
+    )
+
 
 ### xcftools
+This package is used by the script to generate
+the cover image of the output ebook.
+How you go about installing it may
+vary depending on your desktop distribution.
 
 ### imagemagick
+This package is also used by the script to generate
+the cover image of the output ebook.
+How you go about installing it may
+vary depending on your desktop distribution.
 
 ### GIMP
 Stands for __G__NU __I__mage __M__anipulation __P__rogram.
@@ -36,7 +92,7 @@ Well \-\- you need it if you want the MOBI file to be generated.
 However, if the EPUB format is the only one you're interested in,
 then you won't need this tool.
 
-## Steps --
+## Steps for Building the Ebook
 
 ### Prepare generated files.
 Most files that you will need
