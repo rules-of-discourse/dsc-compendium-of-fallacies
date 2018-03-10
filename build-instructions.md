@@ -82,6 +82,14 @@ the cover image of the output ebook.
 How you go about installing it may
 vary depending on your desktop distribution.
 
+### zip
+This is a well-known archiving tool.
+It is needed because an EPUB document
+is actually a zip archive that meets
+certain additional specifications.
+How you go about installing it may
+vary depending on your desktop distribution.
+
 ### GIMP
 Stands for __G__NU __I__mage __M__anipulation __P__rogram.
 This tool is used to generate the cover image.
