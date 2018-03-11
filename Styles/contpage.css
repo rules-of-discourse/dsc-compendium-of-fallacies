@@ -8,4 +8,25 @@ div.maincitm::before {
   content: "\2295 \00a0 ";
 }
 
+div.notice_sect {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 1px;
+}
+
+div.notice_h {
+  font-weight: bold;
+}
+
+div.notice_bod {
+  margin-top: 5px;
+}
+
+
+
+
+
 
