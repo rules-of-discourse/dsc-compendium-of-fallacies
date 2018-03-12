@@ -1,3 +1,8 @@
+
+# Copyright (c) 2018 - Sophia Elizabeth Shapira
+# This script is licensed under the terms of the GNU General
+# Public License version 2.0 or later.
+
 use strict;
 
 my @arglist;

@@ -1,4 +1,8 @@
 
+# Copyright (c) 2018 - Sophia Elizabeth Shapira
+# This script is licensed under the terms of the GNU General
+# Public License version 2.0 or later.
+
 
 # Before we do anything else, we must make sure
 # that we are in the repo's main directory.

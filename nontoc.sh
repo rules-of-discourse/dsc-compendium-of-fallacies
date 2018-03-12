@@ -1,3 +1,9 @@
+
+# Copyright (c) 2018 - Sophia Elizabeth Shapira
+# This script is licensed under the terms of the GNU General
+# Public License version 2.0 or later.
+
+
 # This script you run if you want to generate an EPUB file
 # that is missing the 'toc.ncx' resource. If you do that,
 # you will need to use another program (such as Sigil)
