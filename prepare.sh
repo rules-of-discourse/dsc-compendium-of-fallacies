@@ -39,6 +39,7 @@ sh res/oneitem.sh flc
 sh res/oneitem.sh cog
 sh res/oneitem.sh mal
 sh res/oneitem.sh bon
+sh res/oneitem.sh apd
 
 
 chobakepubtl build recipe.txt prep discursive-compendium
