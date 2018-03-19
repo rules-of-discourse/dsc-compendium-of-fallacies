@@ -23,7 +23,7 @@ cp CoverImage.jpg Images/.
 
 rm -rf recipe.txt
 
-echo "title:Discursive Compendium of Fallacies - $(cat tmpres/datetime-neat.txt)" > recipe.txt
+echo "title:Discursive Compendium of Fallacies and Malconducts - $(cat tmpres/datetime-neat.txt)" > recipe.txt
 echo "author:Sophia Elizabeth Shapira" >> recipe.txt
 echo "publisher:Sophia Elizabeth Shapira" >> recipe.txt
 echo "language:en" >> recipe.txt

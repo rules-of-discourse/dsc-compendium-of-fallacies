@@ -23,8 +23,8 @@ tmpres/justhour.txt
 
 rm -rf *.jpg *.png
 xcf2png CoverImage.xcf -o CoverImage.png
-convert CoverImage.png -gravity North -pointsize 170 -annotate +0+1650 "$(cat tmpres/smdate.txt)" CoverImage01.png
-convert CoverImage01.png -gravity North -pointsize 170 -annotate +0+1900 "$(cat tmpres/justhour.txt)" CoverImage02.png
+convert CoverImage.png -gravity North -fill "#faf053" -pointsize 170 -annotate +0+1650 "$(cat tmpres/smdate.txt)" CoverImage01.png
+convert CoverImage01.png -gravity North -fill "#faf053" -pointsize 170 -annotate +0+1900 "$(cat tmpres/justhour.txt)" CoverImage02.png
 convert CoverImage02.png CoverImage.jpg
 
 
