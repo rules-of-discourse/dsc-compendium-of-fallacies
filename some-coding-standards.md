@@ -92,4 +92,115 @@ his | her | zir
 his | hers | zirs
 himself | herself | zimself
 
+## Excluded Entries
+
+Some entries are included in the project files,
+yet excluded from various editions of the
+rendered project for various reasons.
+For each kind of excluded entry, there is a string
+(which for neatness sake fits the criteria of
+a comment in XHTML) who'se presence in the file
+marks it for such exclusion.
+
+In the ebook rendering of such an edition, the
+excluded entry will be omitted altogether.
+In a web rendering of such an edition,
+the excluded entry will still be present
+as an XHTML file, yet it will be excluded
+from the respective category's table of contents.
+
+### Defunct Entries
+
+When an entry that used to be in
+the compendium is deemed no longer
+worthy to preserve, it should not be
+deleted altogether.
+Instead, the page should be rewritten
+as a placeholder page which does
+little more than link to the more current
+pages that rendered that old page no longer
+needed.
+This policy is in place so that if an
+external site links to that entry in a
+web-renering of the compendium, that link
+will not become a broken link.
+
+However, so that the page will not clutter
+the table-of-contents, and so that it will
+not be included in ebook renditions, it should
+be marked by including in it's XHTML source
+the following string:
+
+    <!-- defunct -->
+
+This will effectively flag the entry
+so that the entry must be
+excluded from all but the most unabridged editions.
+
+### Incomplete Entries
+
+There may be some entries that are not yet
+to a level of completion that will justify
+their inclusion in production-ready
+editions of the compendium, but still
+need to be present in the project even
+in their incomplete state so that they
+can _eventually_ be completed.
+
+Such entries will be marked by including in
+their XHTML source the following string:
+
+    <!-- inprep -->
+
+This will effectively flag the entry so that
+it will be excluded from production-ready editions
+of the compendium, but which (unlike the defunct pages)
+will be included in development-oriented editions of
+the compendium.
+
+There will be a section of this coding standards
+document that will detail _some_ of the situations
+in which an entry ought to be labeled in this manner.
+
+## Incompelete Entries
+
+Earlier in this document it was described how to
+flag incomplete entries so that they will not appear
+in production-ready editions of the Compendium.
+
+This section, however, is to explain _some_ of the _situations_
+in which this is the appropriate thing to do.
+
+### Fallacy entries without the razors worked out
+
+This criterion applies only to entries that describe fallacies.
+Malconducts, while it is still preferred that they have reazors,
+are exempt from them being a prerequisite for the flag of
+incompletion being lifted.
+
+The reason for this is that unlike with malconducts,
+there are plenty of compendiums already out there that
+cover fallacies.
+As far as fallacies are concerned, therefore, the
+importance of having razors is what sets this compendium
+apart from others.
+Therefore, entries on fallacies should not be included
+in the production-ready editions of the compendium
+unless the razors are worked out.
+
+Malconducts, on the other hand, can be included in
+the production-ready editions even if their razors are
+not worked out yet - because malconducts (unlike fallacies)
+are things that most pre-existing compendiums have
+tended to neglect.
+
+### Entries that are just not ready to be worth including
+
+If an entry is so imcomplete that it's presence doesn't
+add value to the compendium, but still should be in the
+project files in hopes of eventual completion,
+then it obviously should be included in development-oriented
+editions of the compendium, but not in production-ready
+editions.
+
 
