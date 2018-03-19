@@ -13,6 +13,8 @@ my $prefixa;
 my $cont_before;
 my $cont_after;
 my $section_title;
+my $abrstate; # 'pub' / 'dev' / 'full'
+my @abrhide;
 
 @arglist = @ARGV;
 if ( &counto(@arglist) < 4.5 )
@@ -40,11 +42,21 @@ sub bsc {
   return $lc_ret;
 }
 
+$abrstate = shift(@arglist);
 $srcfile = shift(@arglist);
 $rcpfile = shift(@arglist);
 $outfile = shift(@arglist);
 $prefixa = shift(@arglist);
 
+@abrhide = ();
+if ( $abrstate eq 'pub' )
+{
+  @abrhide = ('<!-- defunct -->','<!-- inprep -->');
+}
+if ( $abrstate eq 'dev' )
+{
+  @abrhide = ('<!-- defunct -->');
+}
 
 # Here we extract the contents of the source file
 {
@@ -83,6 +95,19 @@ sub foreachfile {
   $lc_con = `$lc_cm`;
   ($lc_sga,$lc_sgb) = split(quotemeta('<title>'),$lc_con);
   ($lc_ttl,$lc_sga) = split(quotemeta('</title>'),$lc_sgb);
+
+  # And here we make sure that none of the flagged strings
+  # are out and about.
+  foreach $lc_sga (@abrhide)
+  {
+    ($lc_sgb) = split(quotemeta($lc_sga),$lc_con);
+    if ( $lc_sgb ne $lc_con )
+    {
+      #print "REJECT: " . $_[0] . ': ' . $lc_sga . "\n";
+      #sleep(10);
+      return;
+    }
+  }
 
   print RCPFIL 'text:' . $prefixa . $_[0] . "\n";
   print RCPFIL 'cont:3:*:' . $lc_ttl . "\n";

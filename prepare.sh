@@ -10,6 +10,11 @@ cd "$(dirname "${0}")" || exit
 repodir="$(pwd)"
 
 sh prepare-image.sh
+abrstate='pub'
+if [ -f 'abrstate.flag' ]; then
+  abrstate="$(cat abrstate.flag)"
+  rm -rf abrstate.flag
+fi
 
 
 rm -rf Images
@@ -35,11 +40,11 @@ echo "cont:1:top_of_page:Contents" >> recipe.txt
 echo "text:Text/introduction.xhtml" >> recipe.txt
 echo "cont:2:*:Introduction" >> recipe.txt
 
-sh res/oneitem.sh flc
-sh res/oneitem.sh cog
-sh res/oneitem.sh mal
-sh res/oneitem.sh bon
-sh res/oneitem.sh apd
+sh res/oneitem.sh flc "${abrstate}"
+sh res/oneitem.sh cog "${abrstate}"
+sh res/oneitem.sh mal "${abrstate}"
+sh res/oneitem.sh bon "${abrstate}"
+sh res/oneitem.sh apd "${abrstate}"
 
 
 chobakepubtl build recipe.txt prep discursive-compendium

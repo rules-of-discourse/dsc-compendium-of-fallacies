@@ -11,7 +11,7 @@ cd "${thetexdir}" || exit
 
 
 
-perl "${repodir}/res/prepfile.pl" \
+perl "${repodir}/res/prepfile.pl" "${2}" \
   "${repodir}/res/pre/src--${1}.xhtml" \
   "${repodir}/recipe.txt" \
   "gnr--${1}.xhtml" \
