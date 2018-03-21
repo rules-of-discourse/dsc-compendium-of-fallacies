@@ -16,10 +16,21 @@ reject it outright \- but is not obligated to do so
 and (unless specifically stated otherwise) makes
 no promise to do so.
 
+You can expect that the resultant EPUB file from
+your contribution will be put through an EPUB validator
+as part of this decision process \-
+and quite possible, all three _versions_ of the
+EPUB output might be subjected to this test
+(the production-ready version, the development-oriented
+version, and the unabridged version).
+
 Contributions that restrict themselves to editing
 the in-category entries (and as few of them as possible)
 are more likely to be accepted than contributions that
-wander outside this scope.
+wander outside this scope. Best, if possible, to edit
+and/or create only one entry per contribution - and
+if necessary to do more than one, _then_ as few as
+possible.
 
 ### XHTML File Naming Convention
 
@@ -202,5 +213,10 @@ project files in hopes of eventual completion,
 then it obviously should be included in development-oriented
 editions of the compendium, but not in production-ready
 editions.
+
+However - rarely will you have enough knowledge to
+put together any entry worth contributing at all that is too
+incomplete on this count without it _also_ being too
+incomplete on one of the more _specific_ counts.
 
 
