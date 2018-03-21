@@ -6,6 +6,18 @@ Unlike actual XHTML documents that would be directly added
 through the usual workflow - these documents would require
 a volunteer to convert them to XHTML.
 
+Submissions should still follow all standards _except_
+for the bit about being in XHTML - because any deviation
+from that would create unnecessary work for the one
+doing the converting. This includes (among other things) adherence
+to the [linguistic standards](linguistic-standards.md)
+and specifically informing the one doing the converting
+if and why the contributed entries are
+[incomplete](incomplete-entries.md).
+
+It is recommended that the author of a non-XHTML contribution
+look at some of the pre-existing entries as examples.
+
 ## Permissions needed by the original author of the document
 
 The author of the document will need to give _express_ permission
