@@ -37,6 +37,10 @@ or later
     terms of the
     [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) license
 
+The project's administration may demand a copy of the
+original document along with the accompanying consent
+before approving the contribution.
+
 ## Giving Credit to the Original Author
 
 There is not enough room in the header-line of a Git commit's
