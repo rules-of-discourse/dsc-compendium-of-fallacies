@@ -18,6 +18,8 @@ DON'T ANYONE MESS WITH THE __main.html__ FILE
 INSIDE THE __txt-contrib__ DIRECTORY - AS IT
 IS THERE FOR THE PURPOSE OF THE REPOSITORY'S
 INTEGRITY.
+Any pull-request that messes with that __main.html__
+file at all will automatically be rejected.
 
 Entries present in such a manner don't get 
 included in the ebook or in the web-site.
