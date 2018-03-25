@@ -1,76 +1,30 @@
 # On Submissions Contributed in Other Formats
 
-Sometimes, someone might offer contributions in formats other
-than XHTML.
-Unlike actual XHTML documents that would be directly added
-through the usual workflow - these documents would require
-a volunteer to convert them to XHTML.
+## Offering contributions not in XHTML
 
-Submissions should still follow all standards _except_
-for the bit about being in XHTML - because any deviation
-from that would create unnecessary work for the one
-doing the converting. This includes (among other things) adherence
-to the [linguistic standards](linguistic-standards.md)
-and specifically informing the one doing the converting
-if and why the contributed entries are
-[incomplete](incomplete-entries.md).
+If you have a contribution to offer, but are not
+up to the task of creating and properly formatting
+an XHTML file so that it will fit into the
+ebook and web-stie, the following alternate
+option is available.
 
-It is recommended that the author of a non-XHTML contribution
-look at some of the pre-existing entries as examples.
+Offer your submission in the form of a plain-text
+document (extension __.txt__)
+and place it in the directory named __txt-contrib__
+in the repository's main directory
+(instead of the directory labeled __Text__).
 
-## Permissions needed by the original author of the document
+DON'T ANYONE MESS WITH THE __main.html__ FILE
+INSIDE THE __txt-contrib__ DIRECTORY - AS IT
+IS THERE FOR THE PURPOSE OF THE REPOSITORY'S
+INTEGRITY.
 
-The author of the document will need to give _express_ permission
-to whoever converts the document and enters it into the project
-to use and distribute it in a manner consistent with the XHTML
-files of the project.
-
-This means that the volunteer who converts the document will
-need _both_ of
-the following two permissions:
-
-  * Permission to use and distribute the contribution under the
-    terms of the
-    [Gnu General Public License version 2.0](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
-or later
-  * Permission to use and distribute the contribution under the
-    terms of the
-    [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) license
-
-The project's administration may demand a copy of the
-original document along with the accompanying consent
-before approving the contribution.
-
-## Giving Credit to the Original Author
-
-There is not enough room in the header-line of a Git commit's
-description to give full credit to the author of a work who
-isn't the same person actually forming the Git entry.
-However, such credit needs to be given.
-
-Fortunately, Git allows for commit messages that include more
-than just the header line.
-Therefore, credit can be given in the body of the Git commit
-message - and all that is needed to establish a convention that
-is to alert people through the header-line that there is important
-credit information in the body of the commit message.
-
-It is asked that the header-line of a commit message that
-contains important credit information in the body of the
-message begin with the following string:
-
-    NTR:
-
-If there are modifications needed to the contribution _beyond_ the
-mere conversion from one format to another, then
-easiest approach might be the following steps:
-
-  * First do one commit in which you add to the repository
-the _verbatim_ entry converted
-to project-standard XHTML from it's provided format.
-It is in the commit message of _this_ commit that you
-credit the providing author as described above.
-
-  * Once you have done that, make a _separate_ commit
-for your _changes_ to the entry.
+Entries present in such a manner don't get 
+included in the ebook or in the web-site.
+However, their presence there in that
+format allows for
+the possibility of another project contributor
+later on converting them to XHTML and placing
+them in such a place that they _will_ get
+into these editions.
 
