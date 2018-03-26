@@ -4,7 +4,7 @@ This entire package is licensed under the terms of the
 [Gnu General Public License version 2.0](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 or later.
 
-Furthermore, the XHTML files and XCF files in this
+Furthermore, the XHTML files, TXT files, and XCF files in this
 package are in addition to that
 licnesed
 under the terms of the
