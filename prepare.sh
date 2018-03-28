@@ -39,6 +39,8 @@ echo "text:Text/maintoc.xhtml" >> recipe.txt
 echo "cont:1:top_of_page:Contents" >> recipe.txt
 echo "text:Text/introduction.xhtml" >> recipe.txt
 echo "cont:2:*:Introduction" >> recipe.txt
+echo "text:Text/externalres.xhtml" >> recipe.txt
+echo "cont:2:*:External Resources" >> recipe.txt
 
 sh res/oneitem.sh flc "${abrstate}"
 sh res/oneitem.sh cog "${abrstate}"
@@ -47,6 +49,7 @@ sh res/oneitem.sh bon "${abrstate}"
 sh res/oneitem.sh apd "${abrstate}"
 
 
+rm -rf *.epub
 chobakepubtl build recipe.txt prep discursive-compendium
 rm -rf *.mobi
 kindlegen discursive-compendium.epub

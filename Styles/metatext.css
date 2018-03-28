@@ -28,3 +28,45 @@ span.vocab {
   font-weight: bold;
 }
 
+div.extresrc {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 1px;
+}
+
+div.extres_name {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 1px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 120%;
+}
+
+div.extres_link {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 1px;
+  text-align: center;
+  font-style: oblique;
+}
+
+div.extres_dscrip {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 1px;
+  text-align: justify;
+}
+
