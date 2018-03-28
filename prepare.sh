@@ -51,5 +51,9 @@ chobakepubtl build recipe.txt prep discursive-compendium
 rm -rf *.mobi
 kindlegen discursive-compendium.epub
 
+echo
+echo
+epubcheck discursive-compendium.epub
+echo
 
 
