@@ -46,6 +46,7 @@ sh res/oneitem.sh flc "${abrstate}"
 sh res/oneitem.sh cog "${abrstate}"
 sh res/oneitem.sh mal "${abrstate}"
 sh res/oneitem.sh bon "${abrstate}"
+sh res/oneitem.sh bis "${abrstate}"
 sh res/oneitem.sh apd "${abrstate}"
 
 
