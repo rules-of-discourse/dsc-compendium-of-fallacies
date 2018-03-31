@@ -38,7 +38,7 @@ echo "ftext:Text/CoverPage.xhtml" >> recipe.txt
 echo "text:Text/maintoc.xhtml" >> recipe.txt
 echo "cont:1:top_of_page:Contents" >> recipe.txt
 echo "text:Text/copynotice.xhtml" >> recipe.txt
-echo "cont:1:top_of_page:Copyright and License Terms" >> recipe.txt
+echo "cont:1:*:Copyright and License Terms" >> recipe.txt
 echo "text:Text/introduction.xhtml" >> recipe.txt
 echo "cont:2:*:Introduction" >> recipe.txt
 echo "text:Text/externalres.xhtml" >> recipe.txt
