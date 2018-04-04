@@ -104,6 +104,18 @@ Well \-\- you need it if you want the MOBI file to be generated.
 However, if the EPUB format is the only one you're interested in,
 then you won't need this tool.
 
+### epubcheck and it's requisite java runtime environment
+Again - installation instructions can vary depending on your
+environment.
+In some environments, there may even be something that you
+have to do after system restarts to maintain the functionality
+of these tools.
+
+However - here, instructions are provided for such installation
+on the following platforms:
+
+  * [Crouton's Ubuntu environment](doc/epubcheck-java/crouton-ubuntu.md)
+
 ## Steps for Building the Ebook
 
 ### Prepare generated files.
