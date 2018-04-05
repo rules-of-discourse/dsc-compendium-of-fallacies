@@ -96,5 +96,32 @@ div.rzs_then {
 }
 
 
+/*
+The "lbset" span class is used in the razors to define
+a new label.
+*/
+span.lbset {
+  font-weight: bold;
+}
+
+span.lbset:before {
+  font-weight: normal;
+  content: "(hereby labeled as \201C";
+}
+
+span.lbset:after {
+  font-weight: normal;
+  content: "\201D)";
+}
+
+/*
+The "lbuse" span class is used in the razors to invoke
+a previously defined label.
+*/
+span.lbuse {
+  font-weight: 600;
+}
+
+
 
 
