@@ -41,6 +41,7 @@ echo "text:Text/copynotice.xhtml" >> recipe.txt
 echo "cont:1:*:Copyright and License Terms" >> recipe.txt
 echo "text:Text/introduction.xhtml" >> recipe.txt
 echo "cont:2:*:Introduction" >> recipe.txt
+echo "cont:3:latest_version:Read the Latest Version" >> recipe.txt
 echo "text:Text/externalres.xhtml" >> recipe.txt
 echo "cont:2:*:External Resources" >> recipe.txt
 
