@@ -50,6 +50,14 @@ div.rzstep {
   padding: 5px;
 }
 
+div.rzs_preexp {
+  font-size: 95%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
 div.rzs_head {
   font-weight: bold;
   font-size: 120%;
